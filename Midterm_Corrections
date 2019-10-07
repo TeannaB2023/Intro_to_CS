@@ -1,0 +1,18 @@
+#Question 1a
+for index in range(0,5):
+  stars = "*" * index
+  print(stars + ":-)" + stars)
+
+#Question 1b
+for index in range(1,6):
+  line = ""
+  for value in range(1, index + 1):
+    if(value % 2 == 0):
+      line += "#"
+    elif(value % 2 > 0):
+      line += "&"
+  print(line)
+
+#Question 1c
+for index in range(1,6):
+  print(index ** 2)
