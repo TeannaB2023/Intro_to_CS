@@ -1,0 +1,24 @@
+# Welcome the user.
+
+print("Welcome")
+
+# Ask them if they have tried the special
+print("Have you tried our new special?")
+# Your code here!
+
+# Thank them for eating at your store.
+# The name of the store is stored in store_name
+
+print("Thank you for eating at " + store_name )
+# Your code here!
+
+# Tell them their total. Total is stored in total
+
+print("Your total is " + str(total))
+# Your code here!
+
+# Tell them how much they paid, and what their change is.
+# The amount paid is stored in amount_paid. Calculate change_owed.
+change_owed = amount_paid - total
+print("You paid " + str(amount_paid) + " and your change is " + str(change_owed ))
+# Your code here!
