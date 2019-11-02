@@ -1,0 +1,55 @@
+# Capitol Maps: Find your way around D.C.!
+
+latitude = float(input("Insert your latitude: "))
+longitude = float(input("Insert your longitude: "))
+
+LANDMARKS = [
+    {
+        'name': 'the White House',
+        'lat': 38.897789,
+        'lon': -77.036562
+    },
+    {
+        'name': 'Downing Hall',
+        'lat': 38.921669,
+        'lon': -77.021361
+    },
+    {
+        'name': 'Dupont Circle',
+        'lat': 38.909760,
+        'lon': -77.043479
+    },
+    {
+        'name': 'Union Station',
+        'lat': 38.897698,
+        'lon': -77.007200
+    }
+]
+
+def nsew(landmark, cur_long, cur_lat):
+    landmark_name = landmark['name']
+    land_lat = landmark['lat']
+    land_long = landmark['lon']
+    if(cur_lat >= land_lat):
+        print("You are north of " + landmark_name)
+    else:
+        print("You are south of " + landmark_name)
+    if (cur_long >= land_long):
+        print("You are east of " + landmark_name)
+    else:
+        print("You are west of " + landmark_name)
+
+if (latitude > 38.902649):
+    print("You are north of K St")
+else:
+    print("You are south of K St")
+
+
+for i in range(len(LANDMARKS)):
+    nsew(LANDMARKS[i], longitude, latitude)
+
+
+miles_lat = (latitude - 38.921669) * 69.172
+miles_long = (longitude + 77.021361) * 53
+miles = (miles_lat ** 2 + miles_long ** 2) ** .5
+print("You are", round(miles, 1), "miles from Downing Hall")
