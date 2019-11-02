@@ -1,0 +1,58 @@
+#arrays == lists (can use interchangably)
+#the pass statements can be deleted when I want to run the functions
+
+#HW 6 (Q1)
+def squared():
+  sq_dict = {}
+  for num in range(1,26):
+    sq_dict[num] = num ** 2
+  return sq_dict
+pass
+#HW 6 (Q2)
+def file_is_additive(file):
+  file = open(file, "r")
+  for line in file:
+    line = line.split(" ")
+    if(int(line[0]) + int(line[1]) != int(line[2])):
+      return False
+  return True
+  pass
+
+#in-class practice
+def same_datatype(list):
+  data_type = type(list[0])
+  for value in list:
+    if(type(value) != data_type):
+      print("Not the same data type")
+      return False
+  pass
+
+#HW 6 (Q5)
+def merge_dictionaries(dict1, dict2):
+  for key in dict2:
+    if(key in dict1):
+      raise KeyError("repeat key")
+    else:
+      dict1[key] = dict2[key]
+
+  return dict1
+  pass
+
+def function_one(a,b):
+  if a % b == 0:
+    return a
+  else:
+    return b
+  pass
+def function_two(c,d):
+  if c/d >= 3:
+    return c-d
+  elif c+d <= 10:
+    return d-c
+  else:
+    return c+d
+  pass
+
+import time
+seconds = time.time()
+print("Seconds since epoch =", seconds)
