@@ -1,0 +1,99 @@
+print("Let's play 5 Questions for the mo'za-ik. by Phony Ppl! Respond either yes or no to the questions.")
+
+print("Does the song title contain the words you, your, or you're?")
+
+you = input(">> ")
+
+if(you == "yes"):
+    print("Is the song title properly capitalized?")
+    cap = input(">> ")
+    if(cap == "no"):
+        song = "somethinG about your love."
+    elif(cap == "yes"):
+        print("The the vibe of the song slow?")
+        slow = input(">> ")
+        if(slow == "no"):
+            song = "Before You get a Boyfriend."
+        elif(slow == "yes"):
+            print("Is the content of the song internally focused?")
+            internally = input(">> ")
+            if(internally == "yes"):
+                song = "Think You're Mine."
+            elif(internally == "no"):
+                song = "Once You Say Hello." 
+            else:
+                print("Please only answer with yes or no, exactly!")
+                song = " "
+        else:
+            print("Please only answer with yes or no, exactly!") 
+            song = " "
+    else:
+        print("Please only answer with yes or no, exactly!")
+        song = " "
+    print("Are you talking about " + song + "?") 
+# Extra credit!
+elif(you == "no"):
+    print("The the vibe of the song slow?") 
+    slow = input(">> ")
+    if(slow == "yes"):
+        print("Is the content of the song internally focused?")
+        internally = input(">> ")
+        if(internally == "yes"):
+            song = "Way Too Far."
+        elif(internally == "no"):
+            song = "Either Way."
+        else:
+            print("Please only answer with yes or no, exactly!")
+            song = " "
+    
+    elif(slow == "no"):
+        print("Is the content of the song internally focused?")
+        internally = input(">> ")
+        if(internally == "yes"):
+            print("Is the main topic of the song a girl?")
+            girl = input(">> ")
+            if(girl == "yes"):
+                song = "One Man Band."
+            elif(girl == "no"):
+                song = "Cookie Crumble."
+            else:
+                print("Please only answer with yes or no, exactly!")
+                song = " "
+        elif(internally == "no"):
+            print("Is the main topic of the song a girl?")
+            girl = input(">> ")
+            if(girl == "no"):
+                print("Is the song title properly capitalized?")
+                cap = input(">> ")
+                if(cap == "yes"):
+                    song = "The Colours."
+                elif(cap == "no"):
+                    song = "on everythinG iii love."
+                else:
+                    print("Please only answer with yes or no, exactly!")
+                    song = " "
+            elif(girl == "yes"):
+                song = "Move Her Mind."
+            else:
+                print("Please only answer with yes or no, exactly!")
+                song = " "
+        else:
+            print("Please only answer with yes or no, exactly!")
+            song = " "
+    else:
+        print("Please only answer with yes or no, exactly!")
+        song = " "
+    print("Are you talking about " + song + "?") 
+    
+elif(you == "no" or "yes"):
+    print("Please only answer with yes or no, exactly!") 
+    song = " "
+    
+else:
+    print("That's not a song from the album, PERIODT!")
+    song = "an irrelevant song"
+    print("Are you talking about " + song + "?") 
+
+
+
+# 5 questions game
